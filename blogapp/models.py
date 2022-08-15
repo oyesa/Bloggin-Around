@@ -1,4 +1,3 @@
-from tkinter import CASCADE
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
@@ -43,7 +42,7 @@ class Comments(models.Model):
 
 
 class Likes(models.Model):
-  blogpost = models.ForeignKey(Blogpost, on_delete=CASCADE)
+  blogpost = models.ForeignKey(Blogpost, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.likes
