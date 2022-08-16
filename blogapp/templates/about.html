@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 {{block.super}}
 
-<h1>You are home honey</h1>
+<div>
+  <div class="about-pg">
+    <h1>Oyesa <span>Oluchina</span></h1>
+    <p>Hello, i'm Oyesa <br>
+      I'm a jack of many trades. But for now, i am a writer, a poet <br> 
+      and a blogger even <br>
+
+      If you care to know, i enjoy long walks, a cup of coffee <br>
+      and a good collection of poetry.
+    </p>
+  </div>
+  <div class="about-img">
+    <img src="/static/profpic1.jpeg" alt="a picture of me">
+  </div>
+</div>
 
 {% endblock %}
