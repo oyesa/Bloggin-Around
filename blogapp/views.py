@@ -18,7 +18,6 @@ def save_blogpost(request):
     blog_content=request.POST['blog_content']
     blog_image=request.FILES['blog_image']
     blog_image=cloudinary.uploader.upload(blog_image)
-
     blogpost=Blogpost(blog_title=blog_title, blog_content=blog_content, blog_image=blog_image)
     blogpost.save_blogpost()
 

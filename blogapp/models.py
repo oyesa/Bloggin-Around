@@ -6,9 +6,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Blogpost(models.Model):
-  name = models.CharField(max_length= 10000)
+  title = models.CharField(max_length= 600, default=True)
   description = models.CharField(max_length= 100000)
   image = CloudinaryField('image', blank=True, null=True)
+  likes_count = models.IntegerField(default=0)
+  comment_count = models.IntegerField(default=0)
+  date_posted = models.DateField(auto_now=True)
 
   #functions
   def save_blogpost(self):
@@ -43,6 +46,7 @@ class Comments(models.Model):
 
 class Likes(models.Model):
   blogpost = models.ForeignKey(Blogpost, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.likes
