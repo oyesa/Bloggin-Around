@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
+{% load bootstrap5 %}
 {% load static %}
 
 
 {% block content %}
-{{block.super}}
 
-<div>
+<div class="hero" style="background-color: bisque; ">
+  <div class="about-img">
+    <img style="float: right; padding-top: 8%;padding-right: 7%; height: 45%; width: 45%;" src="https://res.cloudinary.com/oyesa/image/upload/v1655666757/yygnnwziceng349ej2jk.jpg" alt="a picture of me">
+  </div>
   <div class="about-pg">
-    <h1>Oyesa <span>Oluchina</span></h1>
-    <p>Hello, i'm Oyesa <br>
+    <h1 style="font-family: 'Playfair Display', serif; padding-top: 5%; padding-left: 11%; font-weight: bolder; font-size: 7.7rem;">Oyesa <br> <span style="padding-left: 3%;">Oluchina</span></h1>
+    
+    <p style="padding-left: 19%; padding-bottom: 23%; padding-top: 2%; font-family: 'Montserrat', sans-serif;font-size: 1.3rem;">Hello, i'm Oyesa <br>
       I'm a jack of many trades. But for now, i am a writer, a poet <br> 
-      and a blogger even <br>
+      and a blogger even <br> <br>
 
       If you care to know, i enjoy long walks, a cup of coffee <br>
       and a good collection of poetry.
     </p>
+      
   </div>
-  <div class="about-img">
-    <img src="/static/profpic1.jpeg" alt="a picture of me">
-  </div>
+  
 </div>
 
 {% endblock %}
