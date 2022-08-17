@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block content %}
+{{block.super}}
+
+<style>
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.navbar ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navbar ul li a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+</style>
+
+<body>
+  
 <div class="nav">
   <div class="navbar">
     <img src="https://res.cloudinary.com/oyesa/image/upload/v1660771553/apple-touch-icon_xdxna9.png" alt="logo">
@@ -11,4 +40,6 @@
     </ul>
   </div>
 </div>
+
+</body>
 
