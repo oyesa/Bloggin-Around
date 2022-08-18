@@ -8,7 +8,7 @@ import cloudinary
 
 # Create your views here.
 def home(request):
-  blogposts=Blogpost.objects.all().order_by('blogpost_date') #to view all blogposts available
+  blogposts=Blogpost.objects.all().order_by('date_posted') #to view all blogposts available
   return render(request, 'home.html', {'blogposts':blogposts})
 
 def about(request):
