@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Blogpost(models.Model):
-  title = models.CharField(max_length= 600, default=True)
-  description = models.CharField(max_length= 100000)
+  title = models.CharField(max_length= 255, default=True)
+  description = models.TextField('Description', blank=True)
   image = CloudinaryField('image', blank=True, null=True)
   likes_count = models.IntegerField(default=0)
   comment_count = models.IntegerField(default=0)
@@ -26,7 +26,7 @@ class Blogpost(models.Model):
 
 class Comments(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE)
-  comment = models.CharField(max_length= 1000)
+  comment = models.CharField(max_length= 500)
 
 
   #functions
