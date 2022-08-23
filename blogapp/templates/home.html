@@ -1,8 +1,85 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 {{block.super}}
 
-<h1>You are home honey</h1>
+<style>
 
-{% endblock %}
+*{
+  background: rgb(227,141,234);
+  background: linear-gradient(90deg, rgba(227,141,234,1) 0%, rgba(9,13,121,1) 95%);
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  position: relative;
+  float: right;
+}
+
+.navbar ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navbar ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-img img{
+  height: 50px;
+  width: 50px;
+  padding: 1%;
+}
+
+.p-body{
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  padding: 0%;
+  letter-spacing: 9px;
+}
+
+.p-header{
+  font-family: 'Playfair Display', serif;
+  font-size: 73px;
+  letter-spacing: 21px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 17%;
+}
+
+</style>
+
+<body>
+  
+<section class="header">
+  <div class="nav">
+    <div class="nav-img">
+      <img src="https://res.cloudinary.com/oyesa/image/upload/v1661188149/OYESA_OLUCHINA_wgzocv.png" alt="logo">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+  </div>
+</section>
+
+<section class="body-art">
+  
+  <p class="p-header"> OLUCHY'S BLOG</p>
+  <p class="p-body">You are here, might as well look around</p>
+
+</section>
+</body>
+
+{% endblock content %}
